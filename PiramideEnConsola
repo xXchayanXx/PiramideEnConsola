@@ -1,0 +1,29 @@
+
+public class PiramideEnConsola {
+    
+    
+    static public String pintaPiramide(int alto){
+        String asterisco = "*";
+        String pino = "";
+        String blanco = " ";
+        double espacioBlanco = 0;
+        int pico = 1;
+        int alto2 = alto;
+            for(int j = 1; j<=alto;j++){
+               for(int y = 1; y<alto2; y++){
+                   pino+=" ";
+               }
+               pino+=asterisco.repeat(pico);
+               pino+="\n";
+               pico+=2;
+               alto2 = alto2-1;
+            }
+                                               
+        return pino;                          
+        
+    }
+    
+    public static void main(String[]args){
+        System.out.println(pintaPiramide(25));
+    }
+}
